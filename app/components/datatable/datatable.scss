@@ -1,0 +1,42 @@
+.event-manager__datatable {
+
+  padding: 0 32px;
+
+  .mdc-layout-grid__inner {
+    grid-gap: 0;
+  }
+
+  .cell {
+
+    align-items: center;
+    border-bottom: 1px solid #bbb;
+    display: flex;
+    height: 70px;
+    margin: 0;
+    padding: 6px 24px;
+
+  }
+
+  .event-manager__datatable__cell {
+
+    @extend .cell;
+
+  }
+
+  .event-manager__datatable__cell__header {
+
+    @extend .cell;
+    background-color: $em-grey;
+    color: #666;
+
+  }
+
+  .mdc-select {
+
+    height: 56px;
+    width: 100%;
+
+  }
+
+
+}

@@ -1,0 +1,21 @@
+<header class="mdc-toolbar mdc-toolbar--fixed">
+    <div class="mdc-toolbar__row">
+        <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
+
+            <div class="event-manager__navbar__header mdc-theme--text-primary-on-accent">
+                <div class="mdc-typography--title">
+                    <button class="navbar-menu material-icons mdc-toolbar__icon--menu"
+                            ng-if="$ctrl.toggleNavbarBtnShown"
+                            ng-click="$ctrl.toggleNavbar($ctrl.drawer)">
+                        menu
+                    </button>
+                    <span ng-if="!$ctrl.toggleNavbarBtnShown">Select an Event</span>
+                </div>
+            </div>
+
+            <h1 class="mdc-toolbar__title mdc-typography--display1">
+                My Big Event
+            </h1>
+        </section>
+    </div>
+</header>

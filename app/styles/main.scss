@@ -1,0 +1,44 @@
+$mdc-theme-primary: #3F51B5;
+$mdc-theme-accent: #334293;
+$mdc-theme-background: #fff;
+
+@import "node_modules/@material/theme/mdc-theme";
+@import "node_modules/@material/theme/mixins";
+
+// event-manager colors
+$em-grey: #e6e6e6;
+$screen-sm-min: 768px;
+$screen-md-min: 992px;
+$screen-lg-min: 1200px;
+
+// components css
+@import "app/components/content/content";
+@import "app/components/datatable/datatable";
+@import "app/components/main-content/main-content";
+@import "app/components/navbar/navbar";
+@import "app/components/topbar/topbar";
+
+body, html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+button:focus {
+  outline: 0;
+}
+
+/* Stack toolbar and content on top of each other. */
+.event-manager {
+
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  min-height: 100%;
+  padding: 0;
+
+}
+
+.em-grey--text {
+  color: $em-grey;
+}

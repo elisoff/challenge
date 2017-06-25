@@ -1,0 +1,49 @@
+.event-manager__navbar {
+
+  background-color: $em-grey;
+  padding-bottom: 20px;
+  padding-top: 30px;
+
+}
+
+.event-manager__navbar__header {
+
+  display: flex;
+  height: 100px;
+  width: 60px;
+
+  div {
+
+    align-items: center;
+    display: flex;
+    flex: 1 1 auto;
+
+  }
+
+}
+
+.event-manager__navbar--footer {
+
+  margin: 0 auto;
+  padding: 40px 0 10px 0;
+
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: $screen-sm-min) {
+
+  .event-manager__navbar__header {
+
+    background-color: $mdc-theme-accent;
+    width: 240px;
+
+    div {
+
+      span {
+        padding-left: 12px;
+      }
+
+    }
+
+  }
+}

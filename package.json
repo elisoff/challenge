@@ -1,0 +1,25 @@
+{
+  "name": "challenge",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "@material/layout-grid": "^0.2.0",
+    "@material/theme": "^0.1.5",
+    "angular": "^1.5.7",
+    "grunt": "^1.0.1",
+    "grunt-cli": "^1.2.0",
+    "grunt-contrib-jshint": "^1.1.0",
+    "grunt-karma": "^2.0.0",
+    "jasmine": "^2.6.0",
+    "karma": "^1.7.0",
+    "material-components-web": "^0.13.0"
+  },
+  "author": "Elis de Santis",
+  "license": "ISC",
+  "devDependencies": {
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-sass": "^2.0.0",
+    "node-sass": "^4.5.3"
+  }
+}
