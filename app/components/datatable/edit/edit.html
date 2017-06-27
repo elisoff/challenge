@@ -4,7 +4,7 @@
         <div class="event-manager__datatable__cell mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
             <div class="mdc-textfield mdc-textfield--focused"
                  ng-class="{ 'mdc-textfield--invalid': editForm.ticketName.$invalid }">
-                <input type="text" class="mdc-textfield__input" ng-model="$ctrl.rowData.attributes.name"
+                <input type="text" class="mdc-textfield__input" ng-model="$ctrl.dataModel.attributes.name"
                        name="ticketName"
                        required>
             </div>
@@ -13,21 +13,21 @@
             <div class="mdc-textfield mdc-textfield--focused"
                  ng-class="{ 'mdc-textfield--invalid': editForm.price.$invalid }">
                 <input type="number" class="mdc-textfield__input" string-to-number min="0" required name="price"
-                       ng-model="$ctrl.rowData.attributes.price">
+                       ng-model="$ctrl.dataModel.attributes.price">
             </div>
         </div>
         <div class="event-manager__datatable__cell mdc-layout-grid__cell mdc-layout-grid__cell--span-2">
             <div class="mdc-textfield mdc-textfield--focused"
                  ng-class="{ 'mdc-textfield--invalid': editForm.quantity.$invalid }">
                 <input type="number" class="mdc-textfield__input" name="quantity"
-                       ng-model="$ctrl.rowData.attributes.quantity"
+                       ng-model="$ctrl.dataModel.attributes.quantity"
                        ng-pattern="/^[0-9]+$/"
                        required min="0">
             </div>
         </div>
         <div class="event-manager__datatable__cell mdc-layout-grid__cell mdc-layout-grid__cell--span-2">
             <div class="mdc-textfield mdc-textfield--focused">
-                <select ng-model="$ctrl.rowData.attributes.status">
+                <select ng-model="$ctrl.dataModel.attributes.status">
                     <option value="open">Open</option>
                     <option value="hidden">Hidden</option>
                     <option value="closed">Closed</option>
@@ -37,7 +37,7 @@
         <div class="event-manager__datatable__cell mdc-layout-grid__cell mdc-layout-grid__cell--span-2">
             <button type="submit" class="mdc-button mdc-button--compact mdc-button--raised mdc-button--accent"
                     ng-disabled="editForm.$invalid"
-                    ng-click="$ctrl.save($ctrl.rowData)">
+                    ng-click="$ctrl.save($ctrl.dataModel)">
                 Save
             </button>
         </div>

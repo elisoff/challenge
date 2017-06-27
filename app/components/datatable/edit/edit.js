@@ -10,6 +10,12 @@ angular.module('eventManagerApp.components')
 
             var ctrl = this;
 
+            ctrl.$onInit = function () {
+
+                ctrl.dataModel = angular.copy(ctrl.rowData);
+
+            };
+
             ctrl.save = function (ticketPrice) {
 
                 PicaticApiService.updateTicketPrice(ticketPrice.id, ticketPrice)

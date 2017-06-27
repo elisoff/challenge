@@ -22,7 +22,7 @@ angular.module('eventManagerApp', ['eventManagerApp.services', 'eventManagerApp.
                 url: '/{eventId}',
                 component: 'emMainContent',
                 resolve: {
-                    selectedEvent: function($rootScope, $stateParams, EventNames, PicaticApiService) {
+                    selectedEvent: function($rootScope, $state, $stateParams, EventNames, PicaticApiService) {
                         return $stateParams.eventId && PicaticApiService.getEventById($stateParams.eventId)
                             .then(function (response) {
 
@@ -30,7 +30,9 @@ angular.module('eventManagerApp', ['eventManagerApp.services', 'eventManagerApp.
 
                                 return response.data;
                             }, function () {
-                                // handle error
+
+                                $state.go('eventManager', {}, { reload: true });
+
                             });
                     }
                 }
