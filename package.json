@@ -12,7 +12,6 @@
     "angular-resource": "^1.5.7",
     "grunt": "^1.0.1",
     "grunt-cli": "^1.2.0",
-    "grunt-contrib-jshint": "^1.1.0",
     "grunt-karma": "^2.0.0",
     "jasmine": "^2.6.0",
     "karma": "^1.7.0",
@@ -21,8 +20,15 @@
   "author": "Elis de Santis",
   "license": "ISC",
   "devDependencies": {
+    "angular-mocks": "^1.6.4",
+    "angular-scenario": "^1.6.4",
     "grunt-contrib-watch": "^1.0.0",
     "grunt-sass": "^2.0.0",
-    "node-sass": "^4.5.3"
+    "jasmine-core": "^2.6.4",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-jasmine": "^1.1.0",
+    "karma-phantomjs-launcher": "^1.0.4",
+    "node-sass": "^4.5.3",
+    "phantomjs-prebuilt": "^2.1.14"
   }
 }
