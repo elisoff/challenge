@@ -4,7 +4,8 @@
   box-sizing: border-box;
   display: flex;
   flex: 1 1 auto;
-  height: 100%;
+  flex-flow: row nowrap;
+  height: 100vh;
 
   .event-manager__main {
 
@@ -12,7 +13,7 @@
     flex: 1 1 auto;
     flex-flow: row nowrap;
     justify-content: center;
-    padding-top: 100px;
+    padding-top: 30px;
 
   }
 

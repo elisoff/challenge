@@ -1,10 +1,6 @@
 <div class="event-manager__main-content">
-
-    <div class="event-manager__main--empty-state" ng-hide="true">
-        <span class="mdc-typography--display4 em-grey--text">calendar</span>
-        <p class="mdc-typography--headline">No event selected.</p>
-        <p class="mdc-typography--title mdc-theme--text-hint-on-background">Select an event to edit ticket details.</p>
+    <div ng-if="$ctrl.selectedEvent">
+        <h1 class="mdc-typography--headline">Tickets</h1>
+        <em-datatable class="event-manager__datatable" selected-event="$ctrl.selectedEvent"></em-datatable>
     </div>
-
-    <em-datatable class="event-manager__datatable"></em-datatable>
 </div>

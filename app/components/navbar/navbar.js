@@ -2,8 +2,11 @@
 
 angular.module('eventManagerApp.components')
     .component('emNavbar', {
+        bindings: {
+            user: '<'
+        },
         templateUrl: '/components/navbar/navbar.html',
-        controller: function ($window, $rootScope) {
+        controller: function ($scope, $rootScope, $window, EventNames, NavbarService) {
 
             var ctrl = this;
 
@@ -13,7 +16,24 @@ angular.module('eventManagerApp.components')
 
                 ctrl.navbarShown = (screenWidth >= 768);
 
-                $rootScope.$broadcast('navbar loaded');
+                $rootScope.$broadcast(EventNames.NAVBAR_LOADED);
+
+                NavbarService.generateEventsMap(ctrl.user.id)
+                    .then(function (eventsMap) {
+
+                        ctrl.eventsMap = eventsMap;
+
+                    }, function () {
+
+                        // handle error
+
+                    });
+
+                $scope.$on(EventNames.EVENT_SELECTED, function (e, event) {
+
+                    ctrl.selectedEvent = event;
+
+                });
 
             };
 

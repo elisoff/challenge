@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<html class="mdc-typography">
+<html class="mdc-typography" ng-app="eventManagerApp">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width,initial-scale=1">
         <title>Events | Picatic</title>
+
+        <base href="/">
 
         <link rel="stylesheet" href="/node_modules/material-components-web/dist/material-components-web.css">
 
@@ -12,39 +14,53 @@
         <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
-        <link rel="icon" type="image/png" href="resources/favicon-16x16.png" sizes="16x16">
+        <link rel="icon" type="image/png" href="images/favicon-16x16.png" sizes="16x16">
 
     </head>
 
-    <body ng-app="eventManagerApp">
+    <body>
 
-        <div class="event-manager">
-            <em-topbar></em-topbar>
-            <em-content></em-content>
-        </div>
+        <ui-view></ui-view>
 
         <!-- Material Components -->
         <script src="/node_modules/material-components-web/dist/material-components-web.js" charset="utf-8"></script>
 
         <!-- Angular -->
         <script src="/node_modules/angular/angular.min.js"></script>
+        <script src="/node_modules/angular-resource/angular-resource.js"></script>
+        <script src="/node_modules/@uirouter/angularjs/release/angular-ui-router.min.js"></script>
 
         <!-- App -->
         <script src="app.js"></script>
 
         <!-- Wrappers -->
         <script src="wrappers/MDCPersistentDrawer.js"></script>
+        <script src="wrappers/MDCSnackbar.js"></script>
+
 
         <!-- Services -->
+        <script src="services/event-names.js"></script>
+        <script src="services/picatic-api-service.js"></script>
+        <script src="services/resource.js"></script>
+        <script src="services/utils.js"></script>
+
+        <!-- Resources -->
+        <script src="resources/picatic-api.js"></script>
 
         <!-- Components -->
-        <script src="/components/content/content.js"></script>
-        <script src="/components/main-content/main-content.js"></script>
-        <script src="/components/navbar/navbar.js"></script>
-        <script src="/components/datatable/datatable.js"></script>
-        <script src="/components/datatable/edit/edit.js"></script>
-        <script src="/components/datatable/view/view.js"></script>
-        <script src="/components/topbar/topbar.js"></script>
+        <script src="components/content/content.js"></script>
+        <script src="components/event-manager/event-manager.js"></script>
+        <script src="components/main-content/main-content.js"></script>
+        <script src="components/main-content/main-content-service.js"></script>
+        <script src="components/navbar/navbar.js"></script>
+        <script src="components/navbar/navbar-list.js"></script>
+        <script src="components/navbar/navbar-service.js"></script>
+        <script src="components/datatable/datatable.js"></script>
+        <script src="components/datatable/edit/edit.js"></script>
+        <script src="components/datatable/view/view.js"></script>
+        <script src="components/snackbar-messages/snackbar-messages.js"></script>
+        <script src="components/snackbar-messages/snackbar-messages-service.js"></script>
+        <script src="components/topbar/topbar.js"></script>
 
     </body>
 </html>

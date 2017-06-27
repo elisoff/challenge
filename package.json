@@ -4,9 +4,12 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "@material/animation": "^0.2.3",
     "@material/layout-grid": "^0.2.0",
     "@material/theme": "^0.1.5",
+    "@uirouter/angularjs": "^1.0.4",
     "angular": "^1.5.7",
+    "angular-resource": "^1.5.7",
     "grunt": "^1.0.1",
     "grunt-cli": "^1.2.0",
     "grunt-contrib-jshint": "^1.1.0",

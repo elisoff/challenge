@@ -1,6 +1,6 @@
 .event-manager__datatable {
 
-  padding: 0 32px;
+  padding: 15px 0;
 
   .mdc-layout-grid__inner {
     grid-gap: 0;
@@ -20,6 +20,20 @@
   .event-manager__datatable__cell {
 
     @extend .cell;
+
+    .status {
+      text-transform: capitalize;
+    }
+
+    // Edit view - status field
+    select {
+      background: none;
+      border: none;
+      font-size: inherit;
+      outline: 0;
+      padding: 0 0 8px;
+      width: 100%;
+    }
 
   }
 

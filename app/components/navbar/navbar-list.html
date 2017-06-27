@@ -1,0 +1,38 @@
+<nav class="mdc-list mdc-list--two-line mdc-list-item__text__secondary"
+     ng-repeat="(eventId, event) in $ctrl.eventsMap">
+
+    <a href class="mdc-list-item" ui-sref="eventManager.events({ eventId: eventId })"
+       ng-class="{ 'mdc-persistent-drawer--selected': $ctrl.selectedEvent.id === eventId }">
+        <div class="event-manager__event-list__item" title="{{:: event.summary}}">
+            <p class="mdc-typography--subheading1" ng-bind=":: event.summary"></p>
+            <p class="mdc-typography--caption">{{:: event.start_date | date: 'MMM dd yyyy'}}</p>
+        </div>
+        <i class="material-icons mdc-list-item__end-detail" aria-hidden="true">
+            keyboard_arrow_right
+        </i>
+    </a>
+
+    <hr class="mdc-list-divider">
+
+</nav>
+
+<nav class="mdc-list mdc-list--two-line mdc-list-item__text__secondary" ng-if="$ctrl.loadingEvents">
+
+    <span class="mdc-list-item mdc-typography--subheading1 mdc-theme--text-primary-on-background">
+        Loading events&hellip;
+    </span>
+
+    <hr class="mdc-list-divider">
+
+</nav>
+
+<nav class="mdc-list mdc-list--two-line mdc-list-item__text__secondary"
+     ng-if="$ctrl.isEventsMapEmpty($ctrl.eventsMap) && !$ctrl.loadingEvents">
+
+    <span class="mdc-list-item mdc-typography--subheading1">
+        No events to show
+    </span>
+
+    <hr class="mdc-list-divider">
+
+</nav>

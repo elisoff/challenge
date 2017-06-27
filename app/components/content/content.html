@@ -1,7 +1,17 @@
 <div class="event-manager__content mdc-toolbar-fixed-adjust">
 
-    <em-navbar></em-navbar>
+    <em-navbar user="$ctrl.user"></em-navbar>
 
-    <em-main-content class="event-manager__main"></em-main-content>
+    <div class="event-manager__main">
+        <ui-view>
+
+            <div class="event-manager__main-content--empty-state">
+                <span class="mdc-typography--display4 em-grey--text">calendar</span>
+                <p class="mdc-typography--headline">No event selected.</p>
+                <p class="mdc-typography--title mdc-theme--text-hint-on-background">Select an event to edit ticket details.</p>
+            </div>
+
+        </ui-view>
+    </div>
 
 </div>

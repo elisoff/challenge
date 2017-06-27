@@ -1,20 +1,21 @@
-<div class="mdc-layout-grid__inner">
+<div class="mdc-layout-grid__inner" ng-if="!$ctrl.editShown">
     <div class="event-manager__datatable__cell mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
-        Ticket Name
+        {{:: $ctrl.rowData.attributes.name }}
     </div>
     <div class="event-manager__datatable__cell mdc-layout-grid__cell mdc-layout-grid__cell--span-2">
-        Price
+        {{:: $ctrl.rowData.attributes.price | currency }}
     </div>
     <div class="event-manager__datatable__cell mdc-layout-grid__cell mdc-layout-grid__cell--span-2">
-        Qty
+        {{:: $ctrl.rowData.attributes.quantity }}
     </div>
     <div class="event-manager__datatable__cell mdc-layout-grid__cell mdc-layout-grid__cell--span-2">
-        Status
+        <span class="status"> {{:: $ctrl.rowData.attributes.status | lowercase }} </span>
     </div>
     <div class="event-manager__datatable__cell mdc-layout-grid__cell mdc-layout-grid__cell--span-2">
         <button class="mdc-button mdc-button--compact mdc-button--raised mdc-button--primary"
-                ng-click="$ctrl.edit($ctrl.data)">
+                ng-click="$ctrl.edit($ctrl.rowData)">
             Edit
         </button>
     </div>
 </div>
+<ng-transclude ng-if="$ctrl.editShown"></ng-transclude>
